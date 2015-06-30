@@ -1,0 +1,27 @@
+/* Copyright 2015 Zachary Doll */
+.printLink {
+    display: inline-block;
+    background: url('print-sprite.png') 0px 0px;
+    height: 18px;
+    width: 18px;
+    vertical-align: top;
+    overflow: hidden;
+    text-indent: -1000px;
+    font-size: 1px;
+    margin-left: 2px;
+}
+
+.printLink:hover {
+    background: url('print-sprite.png') 0px -18px;
+}
+
+@media print {
+    body {
+        visibility: hidden;
+    } 
+    
+    .MessageList,
+    .CommentsWrap {
+        visibility: visible;
+    }
+}
